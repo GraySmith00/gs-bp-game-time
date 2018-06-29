@@ -1,5 +1,25 @@
 #game {
   border: 1px dashed;
-  margin: auto;
+  margin: 100px auto;
   display: block;
+}
+
+nav {
+  height: 80px;
+  background-color: #040f10;
+  position: fixed; 
+  top: 0; 
+  width: 100%;
+}
+
+h1 {
+  font-family: 'Tron';
+  font-size: 2em;
+  color: #94fcf1;
+  text-align: center;
+}
+
+@font-face {
+  font-family: 'Tron';
+  src: url('./tr2n/Tr2n.ttf')
 }
