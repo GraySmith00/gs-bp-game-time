@@ -1,5 +1,69 @@
+* {
+  box-sizing: border-box;
+  background-color: #003b41;
+}
+
 #game {
-  border: 1px dashed;
-  margin: auto;
+  border: 2px solid #040f10;
+  margin: 0 auto;
+  /* margin-top: 105px; */
   display: block;
+}
+
+nav {
+  height: 100px;
+  background-color: #040f10;
+  /* position: fixed;  */
+  /* top: 0;  */
+  width: 100%;
+  padding: 25px;
+  margin-bottom: 25px;
+}
+
+h1 {
+  font-family: 'Tron';
+  font-size: 3em;
+  color: #94fcf1;
+  text-align: center;
+  background-color: #040f10;
+  margin: auto;
+}
+ h2 {
+   font-family: 'Tron';
+   font-size: 2em;
+   text-align: center;
+   color: black;
+   margin: auto;
+   padding: 50px;
+ }
+
+ h3 {
+  font-family: 'Tron2';
+  font-size: 2em;
+  text-align: center;
+  color: black;
+  margin: auto;
+  padding: 10px;
+ }
+
+@font-face {
+  font-family: 'Tron';
+  src: url('./tr2n/Tr2n.ttf')
+}
+@font-face {
+  font-family: 'Tron2';
+  src: url('./sheeping_cats/Sheeping Cats Straight.otf')
+}
+
+.gamePage {
+  display: flex;
+  justify-items: center;
+  font-family: 'Tron';
+}
+
+.wins-box {
+  text-align: center;
+  border: 1px solid #94fcf1;
+  border-radius: 10px;
+  margin: 2em;
 }
