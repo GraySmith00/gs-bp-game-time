@@ -11,13 +11,13 @@
 }
 
 nav {
-  height: 100px;
+  height: 80px;
   background-color: #040f10;
   /* position: fixed;  */
   /* top: 0;  */
   width: 100%;
-  padding: 25px;
-  margin-bottom: 25px;
+  padding: 20px;
+  margin-bottom: 20px;
 }
 
 h1 {
@@ -32,7 +32,7 @@ h1 {
    font-family: 'Tron';
    font-size: 2em;
    text-align: center;
-   color: black;
+   color: #f3ab42;
    margin: auto;
    padding: 50px;
  }
@@ -41,7 +41,7 @@ h1 {
   font-family: 'Tron2';
   font-size: 2em;
   text-align: center;
-  color: black;
+  color: #73fbfd;
   margin: auto;
   padding: 10px;
  }
