@@ -20,6 +20,12 @@ nav {
   margin-bottom: 20px;
 }
 
+.winner-block {
+  font-size: 2em;
+  color: #94fcf1;
+  text-align: center;
+}
+
 h1 {
   font-family: 'Tron';
   font-size: 3em;
