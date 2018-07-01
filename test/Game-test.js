@@ -3,7 +3,6 @@ const Game = require('../lib/Game');
 
 describe('Game', function() {
   let newGame;
-  let canvas = { width: 500, height: 500 };
   let ctx = '';
 
   beforeEach('initialize new Game', function() {
