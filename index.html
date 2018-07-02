@@ -9,26 +9,28 @@
   <nav>
     <h1>TRON</h1>
   </nav>
-  <div class='gamePage'>
-  <aside>
-    <h2>Player 1</h2>
-    <div class='wins-box'>
-      <h2 class='score'>Score</h2>
-        <h3 class='player1wins'>0</h3>
-      </div>
-  </aside>
-  <section>
-    <canvas id="game" width="500" height="500" tabIndex=0></canvas>
+  <main>
+    <section class="gamePlay">
+      <aside>
+        <h2>Player 1</h2>
+        <div class='wins-box'>
+          <h2 class='score'>Score</h2>
+            <h3 class='player1wins'>0</h3>
+          </div>
+      </aside>
+      <section>
+        <canvas id="game" width="500" height="500" tabIndex=0></canvas>
+      </section>
+      <aside>
+        <h2>Player 2</h2>
+        <div class='wins-box'>
+          <h2 class='score'>Score</h2>
+          <h3 class='player2wins'>0</h3>
+        </div>
+      </aside>
+    </section>
     <p class='winner-block'></p>
-  </section>
-  <aside>
-    <h2>Player 2</h2>
-    <div class='wins-box'>
-      <h2 class='score'>Score</h2>
-      <h3 class='player2wins'>0</h3>
-    </div>
-  </aside>
-</div>
+  </main>
 <script src="main.bundle.js"></script>
 </body>
 </html>
