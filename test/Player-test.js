@@ -11,13 +11,65 @@ describe('Player', function() {
   });
 
   it('should instantiate a new player', function() {
-    assert.equal(player.startX, 100);
+    assert.equal(player.x, 100);
   });
 
-  it('should have a lightCycle', function() {
-    assert.equal(player.lightCycle.x, 100);
-    assert.equal(player.lightCycle.y, 100);
-    assert.equal(player.lightCycle.color, '#333444');
-    assert.equal(player.lightCycle.speed, 10);
+  it('should be an object', () => {
+    assert.equal(typeof player, 'object');
+  });
+
+  it('should have a starting point', () => {
+    assert.equal(player.x, 100);
+    assert.equal(player.y, 100);
+  });
+
+  it('should have a color', () => {
+    assert.equal(player.color, '#555666');
+  });
+
+  it('should initialize a tails array', () => {
+    assert.equal(Array.isArray(player.tails), true);
+  });
+
+  it('should start with an object at the tails array index [0]', () => {
+    assert.equal(typeof lightCycle.tails[0], 'object');
+  });
+
+  it('should have tail starting point the same as the lightCycle', () => {
+    assert.equal(lightCycle.tails[0].x, lightCycle.x);
+    assert.equal(lightCycle.tails[0].y, lightCycle.y);
+  });
+
+  it('should have tail width & height the same as the lightCycle SCL', () => {
+    assert.equal(lightCycle.tails[0].height, lightCycle.SCL);
+    assert.equal(lightCycle.tails[0].width, lightCycle.SCL);
+  });
+
+  it('should start out with a direction of "Right"', () => {
+    assert.equal(lightCycle.direction, 'Right');
+  });
+
+  it('should increase its x location if moving to the right', () => {
+    lightCycle.direction = 'Right';
+    lightCycle.move();
+    assert.equal(lightCycle.tails[0].x, 110);
+  });
+
+  it('should decrease its x location if moving to the left', () => {
+    lightCycle.direction = 'Left';
+    lightCycle.move();
+    assert.equal(lightCycle.tails[0].x, 90);
+  });
+
+  it('should increate its y location if moving down', () => {
+    lightCycle.direction = 'Down';
+    lightCycle.move();
+    assert.equal(lightCycle.tails[0].y, 110);
+  });
+
+  it('should decrease its y location if moving up', () => {
+    lightCycle.direction = 'Up';
+    lightCycle.move();
+    assert.equal(lightCycle.tails[0].y, 90);
   });
 });
