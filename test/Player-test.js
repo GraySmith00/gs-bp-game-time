@@ -3,8 +3,28 @@ const Player = require('../lib/Player');
 
 describe('Player', function() {
   let player;
-  let canvas = { width: 500, height: 500 };
-  let ctx = 'ctx';
+  let ctx = {
+    canvas: 'canvas#game',
+    fillStyle: '#000000',
+    filter: 'none',
+    font: '10px sans-serif',
+    globalAlpha: 1,
+    globalCompositeOperation: 'source-over',
+    imageSmoothingEnabled: true,
+    imageSmoothingQuality: 'low',
+    lineCap: 'butt',
+    lineDashOffset: 0,
+    lineJoin: 'miter',
+    lineWidth: 1,
+    miterLimit: 10,
+    shadowBlur: 0,
+    shadowColor: 'rgba(0, 0, 0, 0)',
+    shadowOffsetX: 0,
+    shadowOffsetY: 0,
+    strokeStyle: '#000000',
+    textAlign: 'start',
+    textBaseline: 'alphabetic'
+  };
 
   beforeEach('instantiate player', function() {
     player = new Player(100, 100, 0, 10, '#333444', 'ctx');
@@ -28,48 +48,36 @@ describe('Player', function() {
   });
 
   it('should initialize a tails array', () => {
+    player.setInitialTail();
     assert.equal(Array.isArray(player.tails), true);
   });
 
-  it('should start with an object at the tails array index [0]', () => {
-    assert.equal(typeof lightCycle.tails[0], 'object');
-  });
-
-  it('should have tail starting point the same as the lightCycle', () => {
-    assert.equal(lightCycle.tails[0].x, lightCycle.x);
-    assert.equal(lightCycle.tails[0].y, lightCycle.y);
-  });
-
-  it('should have tail width & height the same as the lightCycle SCL', () => {
-    assert.equal(lightCycle.tails[0].height, lightCycle.SCL);
-    assert.equal(lightCycle.tails[0].width, lightCycle.SCL);
-  });
-
-  it('should start out with a direction of "Right"', () => {
-    assert.equal(lightCycle.direction, 'Right');
+  it('should draw a tail', () => {
+    player.draw(ctx);
+    assert.equal(ctx.fillStyle, '#333444');
   });
 
   it('should increase its x location if moving to the right', () => {
-    lightCycle.direction = 'Right';
-    lightCycle.move();
-    assert.equal(lightCycle.tails[0].x, 110);
+    player.direction = 'Right';
+    player.move();
+    assert.equal(player.tails[0].x, 110);
   });
 
   it('should decrease its x location if moving to the left', () => {
-    lightCycle.direction = 'Left';
-    lightCycle.move();
-    assert.equal(lightCycle.tails[0].x, 90);
+    player.direction = 'Left';
+    player.move();
+    assert.equal(player.tails[0].x, 90);
   });
 
   it('should increate its y location if moving down', () => {
-    lightCycle.direction = 'Down';
-    lightCycle.move();
-    assert.equal(lightCycle.tails[0].y, 110);
+    player.direction = 'Down';
+    player.move();
+    assert.equal(player.tails[0].y, 110);
   });
 
   it('should decrease its y location if moving up', () => {
-    lightCycle.direction = 'Up';
-    lightCycle.move();
-    assert.equal(lightCycle.tails[0].y, 90);
+    player.direction = 'Up';
+    player.move();
+    assert.equal(player.tails[0].y, 90);
   });
 });
