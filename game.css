@@ -4,17 +4,14 @@
 }
 
 #game {
-  border: 2px solid #040f10;
+  border: 4px solid #040f10;
   margin: 0 auto;
-  /* margin-top: 105px; */
   display: block;
 }
 
 nav {
   height: 80px;
   background-color: #040f10;
-  /* position: fixed;  */
-  /* top: 0;  */
   width: 100%;
   padding: 20px;
   margin-bottom: 20px;
@@ -34,6 +31,7 @@ h1 {
   background-color: #040f10;
   margin: auto;
 }
+
  h2 {
    font-family: 'Tron';
    font-size: 2em;
@@ -47,15 +45,16 @@ h1 {
   font-family: 'Tron2';
   font-size: 2em;
   text-align: center;
-  color: #73fbfd;
+  color: #d8d8d8;
   margin: auto;
-  padding: 10px;
+  padding-bottom: 10px;
  }
 
 @font-face {
   font-family: 'Tron';
   src: url('./tr2n/Tr2n.ttf')
 }
+
 @font-face {
   font-family: 'Tron2';
   src: url('./sheeping_cats/Sheeping Cats Straight.otf')
@@ -63,13 +62,18 @@ h1 {
 
 .gamePage {
   display: flex;
-  justify-items: center;
+  justify-content: center;
   font-family: 'Tron';
+  margin: 0 auto;
 }
 
 .wins-box {
   text-align: center;
   border: 1px solid #94fcf1;
-  border-radius: 10px;
-  margin: 2em;
+  margin: 1em;
+}
+
+.score { 
+  padding: 20px;
+  margin: 0 10px;
 }
