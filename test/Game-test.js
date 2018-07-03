@@ -51,8 +51,8 @@ describe('Game', function() {
     newGame.loadPlayers();
     newGame.newLevel();
 
-    assert.equal(newGame.players[0].x, 100);
-    assert.equal(newGame.players[1].x, 400);
+    assert.equal(newGame.players[0].x, 70);
+    assert.equal(newGame.players[1].x, 420);
     assert.equal(newGame.players[0].direction, 'Right');
     assert.equal(newGame.players[1].direction, 'Left');
   });
@@ -63,8 +63,8 @@ describe('Game', function() {
     newGame.loadPlayers();
     newGame.newLevel();
     newGame.animate(ctx);
-    assert.equal(newGame.players[0].tails[0].x, 110);
-    assert.equal(newGame.players[1].tails[0].x, 390);
+    assert.equal(newGame.players[0].tails[0].x, 80);
+    assert.equal(newGame.players[1].tails[0].x, 410);
     assert.equal(ctx.fillStyle, '#DC4BF7');
   });
 
