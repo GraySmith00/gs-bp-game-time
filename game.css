@@ -53,11 +53,26 @@ main {
   display: block;
   margin: 0 auto;
   border: 4px solid #040f10;
-  background: url('./public/images/tron-intro.png');
   background-color: #040f10;
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.introBackground {
+  background: url('./public/images/tron-intro.png');
+}
+
+.tron3 {
+  background: url('./public/images/tronGrid3.png');
+}
+
+.tron4 {
+  background: url('./public/images/tronGrid4.png');
+}
+
+.tron5 {
+  background: url('./public/images/tronGrid5.png');
 }
 
 .winner-block {
