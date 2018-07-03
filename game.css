@@ -24,11 +24,6 @@ body {
   height: 100vh;
 }
 
-.overlay {
-  background-color: rgba(0, 0, 0, 0.3);
-  height: 100vh;
-}
-
 nav {
   display: flex;
   flex-direction: column;
@@ -106,6 +101,7 @@ h3 {
   margin: auto;
   padding-bottom: 10px;
   color: #d8d8d8;
+  font-family: 'Tron2'
 }
 
 .winner-block {
@@ -114,15 +110,4 @@ h3 {
   color: #ffffff;
   text-align: center;
   font-family: 'Tron';
-}
-
-@font-face {
-  font-family: 'Tron';
-  src: url('./tr2n/Tr2n.ttf');
-}
-
-@font-face {
-  font-family: 'Tron2';
-  font-size: 2em;
-  text-align: center;
 }
