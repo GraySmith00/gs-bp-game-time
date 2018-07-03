@@ -3,7 +3,7 @@ const Player = require('../lib/Player');
 
 describe('Player', function() {
   let player;
-
+  
   class Context {
     constructor() {
       this.canvas = 'canvas#game';

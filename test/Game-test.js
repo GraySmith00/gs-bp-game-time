@@ -26,6 +26,14 @@ describe('Game', function() {
 
   it('should instantiate a new game', function() {
     assert.equal(newGame.height, 100);
+    assert.equal(newGame.width, 100);
+    assert.equal(newGame.level, 0);
+    assert.equal(newGame.height, 100);
+    assert.equal(newGame.SCL, 10);
+    assert.equal(newGame.gameOver, false);
+    assert.equal(newGame.levelOver, false);
+    assert.equal(newGame.ready, true);
+    assert.equal(newGame.winner, '');
   });
 
   it('should load two new players', function() {
@@ -69,8 +77,6 @@ describe('Game', function() {
   });
 
   it('should detect a self crash', function() {
-    // const { x, width } = newGame.players[0].tails[0];
-    // x + width > newGame.players[0].tails[6].x;
     const ctx = new Context();
     let p1;
 
