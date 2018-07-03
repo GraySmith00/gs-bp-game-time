@@ -8,6 +8,16 @@
   src: url('./sheeping_cats/Sheeping Cats Straight.otf');
 }
 
+#preload-01 {
+  background: url('./public/images/tronGrid3.png');
+}
+#preload-02 {
+  background: url('./public/images/tronGrid4.png');
+}
+#preload-02 {
+  background: url('./public/images/tronGrid5.png');
+}
+
 body {
   box-sizing: border-box;
   background: url('./public/images/tronBackground.jpg');
