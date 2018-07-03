@@ -16,6 +16,12 @@ body {
   height: 100vh;
   margin: 0;
   font-family: 'Tron';
+  height: 100vh;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 100vh;
 }
 
 .overlay {
@@ -100,6 +106,22 @@ h3 {
   margin: auto;
   padding-bottom: 10px;
   color: #d8d8d8;
+}
+
+.winner-block {
+  margin-top: 1.1rem;
+  font-size: 4em;
+  color: #ffffff;
+  text-align: center;
+  font-family: 'Tron';
+}
+
+@font-face {
+  font-family: 'Tron';
+  src: url('./tr2n/Tr2n.ttf');
+}
+
+@font-face {
   font-family: 'Tron2';
   font-size: 2em;
   text-align: center;
