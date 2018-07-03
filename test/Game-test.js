@@ -102,7 +102,10 @@ describe('Game', function() {
     newGame.animate(ctx);
     p1.direction = 'Up';
 
-    for (let i = 0; i < 12; i++) {
+    newGame.animate(ctx);
+    p1.direction = 'Left';
+
+    for (let i = 0; i < 25; i++) {
       newGame.animate(ctx);
     }
 
