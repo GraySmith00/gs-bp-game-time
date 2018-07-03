@@ -3,31 +3,23 @@ const Player = require('../lib/Player');
 
 describe('Player', function() {
   let player;
-  let ctx = {
-    canvas: 'canvas#game',
-    fillStyle: '#000000',
-    filter: 'none',
-    font: '10px sans-serif',
-    globalAlpha: 1,
-    globalCompositeOperation: 'source-over',
-    imageSmoothingEnabled: true,
-    imageSmoothingQuality: 'low',
-    lineCap: 'butt',
-    lineDashOffset: 0,
-    lineJoin: 'miter',
-    lineWidth: 1,
-    miterLimit: 10,
-    shadowBlur: 0,
-    shadowColor: 'rgba(0, 0, 0, 0)',
-    shadowOffsetX: 0,
-    shadowOffsetY: 0,
-    strokeStyle: '#000000',
-    textAlign: 'start',
-    textBaseline: 'alphabetic'
-  };
+
+  class Context {
+    constructor() {
+      this.canvas = 'canvas#game';
+      this.fillStyle = '#000000';
+      this.filter = 'none';
+      this.font = '10px sans-serif';
+      this.globalAlpha = 1;
+    }
+
+    fillRect(x, y, width, height) {
+      return `${(x, y, width, height)}`;
+    }
+  }
 
   beforeEach('instantiate player', function() {
-    player = new Player(100, 100, 0, 10, '#333444', 'ctx');
+    player = new Player(100, 100, 10, '#333444', 'Right');
   });
 
   it('should instantiate a new player', function() {
@@ -44,7 +36,7 @@ describe('Player', function() {
   });
 
   it('should have a color', () => {
-    assert.equal(player.color, '#555666');
+    assert.equal(player.color, '#333444');
   });
 
   it('should initialize a tails array', () => {
@@ -53,6 +45,8 @@ describe('Player', function() {
   });
 
   it('should draw a tail', () => {
+    const ctx = new Context();
+
     player.draw(ctx);
     assert.equal(ctx.fillStyle, '#333444');
   });

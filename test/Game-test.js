@@ -3,28 +3,6 @@ const Game = require('../lib/Game');
 
 describe('Game', function() {
   let newGame;
-  const ctx = {
-    canvas: 'canvas#game',
-    fillStyle: '#000000',
-    filter: 'none',
-    font: '10px sans-serif',
-    globalAlpha: 1,
-    globalCompositeOperation: 'source-over',
-    imageSmoothingEnabled: true,
-    imageSmoothingQuality: 'low',
-    lineCap: 'butt',
-    lineDashOffset: 0,
-    lineJoin: 'miter',
-    lineWidth: 1,
-    miterLimit: 10,
-    shadowBlur: 0,
-    shadowColor: 'rgba(0, 0, 0, 0)',
-    shadowOffsetX: 0,
-    shadowOffsetY: 0,
-    strokeStyle: '#000000',
-    textAlign: 'start',
-    textBaseline: 'alphabetic'
-  };
 
   class Context {
     constructor() {
@@ -35,12 +13,14 @@ describe('Game', function() {
       this.globalAlpha = 1;
     }
 
-    fillRect(x, y, height, width) {
-      return 'Filling rect';
+    fillRect(x, y, width, height) {
+      return `${(x, y, width, height)}`;
     }
   }
 
   beforeEach('initialize new Game', function() {
+    const ctx = new Context();
+
     newGame = new Game(100, 100, ctx);
   });
 
