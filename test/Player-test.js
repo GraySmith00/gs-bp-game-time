@@ -26,50 +26,50 @@ describe('Player', function() {
     assert.equal(player.x, 100);
   });
 
-  it('should be an object', () => {
+  it('should be an object', function() {
     assert.equal(typeof player, 'object');
   });
 
-  it('should have a starting point', () => {
+  it('should have a starting point', function() {
     assert.equal(player.x, 100);
     assert.equal(player.y, 100);
   });
 
-  it('should have a color', () => {
+  it('should have a color', function() {
     assert.equal(player.color, '#333444');
   });
 
-  it('should initialize a tails array', () => {
+  it('should initialize a tails array', function() {
     player.setInitialTail();
     assert.equal(Array.isArray(player.tails), true);
   });
 
-  it('should draw a tail', () => {
+  it('should draw a tail', function() {
     const ctx = new Context();
 
     player.draw(ctx);
     assert.equal(ctx.fillStyle, '#333444');
   });
 
-  it('should increase its x location if moving to the right', () => {
+  it('should increase its x location if moving to the right', function() {
     player.direction = 'Right';
     player.move();
     assert.equal(player.tails[0].x, 110);
   });
 
-  it('should decrease its x location if moving to the left', () => {
+  it('should decrease its x location if moving to the left', function() {
     player.direction = 'Left';
     player.move();
     assert.equal(player.tails[0].x, 90);
   });
 
-  it('should increate its y location if moving down', () => {
+  it('should increate its y location if moving down', function() {
     player.direction = 'Down';
     player.move();
     assert.equal(player.tails[0].y, 110);
   });
 
-  it('should decrease its y location if moving up', () => {
+  it('should decrease its y location if moving up', function() {
     player.direction = 'Up';
     player.move();
     assert.equal(player.tails[0].y, 90);
