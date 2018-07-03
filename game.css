@@ -1,9 +1,20 @@
+@font-face {
+  font-family: 'Tron';
+  src: url('./tr2n/Tr2n.ttf');
+}
+
+@font-face {
+  font-family: 'Tron2';
+  src: url('./sheeping_cats/Sheeping Cats Straight.otf');
+}
+
 body {
-  margin: 0;
   box-sizing: border-box;
   background: url('./public/images/tronBackground.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  height: 100vh;
+  margin: 0;
   font-family: 'Tron';
   height: 100vh;
 }
@@ -13,28 +24,9 @@ body {
   height: 100vh;
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.gamePlay {
-  display: flex;
-  justify-content: center;
-  font-family: 'Tron';
-  margin: 0 auto;
-}
-
-#game {
-  border: 4px solid #040f10;
-  margin: 0 auto;
-  display: block;
-  background-color: #040f10;
-  background: url('./public/images/tron-intro.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center top;
+.overlay {
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 100vh;
 }
 
 nav {
@@ -43,37 +35,77 @@ nav {
   align-content: center;
   justify-content: center;
   height: 80px;
-  background-color: #040f10;
   width: 100%;
-  padding: 0.1rem 0;
   margin-bottom: 1rem;
+  padding: 0.1rem 0;
+  background-color: #040f10;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.gamePlay {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  font-family: 'Tron';
+}
+
+#game {
+  display: block;
+  margin: 0 auto;
+  border: 4px solid #040f10;
+  background: url('./public/images/tron-intro.png');
+  background-color: #040f10;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.winner-block {
+  margin-top: 1.1rem;
+  color: #ffffff;
+  font-family: 'Tron';
+  font-size: 4em;
+  text-align: center;
+}
+
+.wins-box {
+  border: 1px solid #94fcf1;
+  margin: 1em;
+  background-color: #23596d;
+  text-align: center;
+}
+
+.score {
+  padding: 20px;
+  margin: 0 10px;
 }
 
 h1 {
+  background-color: #040f10;
+  color: #94fcf1;
   font-family: 'Tron';
   font-size: 3em;
-  color: #94fcf1;
   text-align: center;
-  background-color: #040f10;
-  /* margin: auto; */
 }
 
 h2 {
+  margin: auto;
+  padding: 50px;
+  color: #f3ab42;
   font-family: 'Tron';
   font-size: 2em;
   text-align: center;
-  color: #f3ab42;
-  margin: auto;
-  padding: 50px;
 }
 
 h3 {
-  font-family: 'Tron2';
-  font-size: 2em;
-  text-align: center;
-  color: #d8d8d8;
   margin: auto;
   padding-bottom: 10px;
+  color: #d8d8d8;
 }
 
 .winner-block {
@@ -91,17 +123,6 @@ h3 {
 
 @font-face {
   font-family: 'Tron2';
-  src: url('./sheeping_cats/Sheeping Cats Straight.otf');
-}
-
-.wins-box {
+  font-size: 2em;
   text-align: center;
-  border: 1px solid #94fcf1;
-  margin: 1em;
-  background-color: #23596d;
-}
-
-.score {
-  padding: 20px;
-  margin: 0 10px;
 }
