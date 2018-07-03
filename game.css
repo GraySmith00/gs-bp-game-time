@@ -46,7 +46,6 @@ main {
   display: flex;
   justify-content: center;
   margin: 0 auto;
-  font-family: 'Tron';
 }
 
 #game {
@@ -79,7 +78,6 @@ main {
   margin-top: 1.1rem;
   margin-bottom: 0;
   color: #ffffff;
-  font-family: 'Tron';
   font-size: 4em;
   text-align: center;
 }
@@ -99,7 +97,6 @@ main {
 h1 {
   background-color: #040f10;
   color: #94fcf1;
-  font-family: 'Tron';
   font-size: 3em;
   text-align: center;
 }
@@ -108,7 +105,6 @@ h2 {
   margin: auto;
   padding: 50px;
   color: #f3ab42;
-  font-family: 'Tron';
   font-size: 2em;
   text-align: center;
 }
@@ -126,5 +122,4 @@ h3 {
   font-size: 4em;
   color: #ffffff;
   text-align: center;
-  font-family: 'Tron';
 }
