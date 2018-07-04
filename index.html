@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Game Time</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
   <link href='./game.css' rel='stylesheet' type='text/css'/>
 </head>
 <body>
@@ -12,23 +13,78 @@
     </nav>
     <main>
       <section class="gamePlay">
-        <aside>
-          <h2>Player 1</h2>
-          <div class='wins-box'>
-            <h2 class='score'>Score</h2>
+          <aside class="game-sides">
+            <h2>Player 1</h2>
+            <div class='wins-box'>
+              <h2 class='score'>Score</h2>
               <h3 class='player1wins'>0</h3>
+            </div>    
+            <div class="player-keys">
+              <div class="key-row key-row1">
+                <div class="key" data-key="87">
+                  <div class="key-text">
+                    W
+                  </div>
+                </div>
+              </div>
+              <div class="key-row key-row2">
+                <div class="key" data-key="65">
+                  <div class="key-text">
+                    A
+                  </div>
+                </div>
+                <div class="key" data-key="83">
+                  <div class="key-text">
+                    S
+                  </div>
+                </div>
+                <div class="key" data-key="68">
+                  <div class="key-text">
+                    D
+                  </div>
+                </div>
+              </div>
             </div>
-        </aside>
+          </aside>
         <section>
           <canvas id="game" class="game introBackground" width="500" height="500" tabIndex=0></canvas>
         </section>
-        <aside>
-          <h2>Player 2</h2>
-          <div class='wins-box'>
-            <h2 class='score'>Score</h2>
-            <h3 class='player2wins'>0</h3>
-          </div>
-        </aside>
+        <section class="game-sides">
+          <aside>
+            <h2>Player 2</h2>
+            <div class='wins-box'>
+              <h2 class='score'>Score</h2>
+              <h3 class='player2wins'>0</h3>
+            </div>
+            <div class="player-keys">
+              <div class="key-row key-row1">
+                <div class="key" data-key="38">
+                  <div class="key-text">
+                      <i class="fas fa-angle-up"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="key-row key-row2">
+                <div class="key" data-key="37">
+                  <div class="key-text">
+                    <i class="fas fa-angle-left"></i>
+                  </div>
+                </div>
+                <div class="key" data-key="40">
+                  <div class="key-text">
+                    <i class="fas fa-angle-down"></i>
+                  </div>
+                </div>
+                <div class="key" data-key="39">
+                  <div class="key-text">
+                    <i class="fas fa-angle-right"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </aside>
+
+        </section>
       </section>
       <p class='winner-block'></p>
     </main>
