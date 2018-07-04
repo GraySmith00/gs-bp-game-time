@@ -19,6 +19,29 @@ body {
   height: 100vh;
 }
 
+h1 {
+  background-color: #040f10;
+  color: #94fcf1;
+  font-size: 3em;
+  text-align: center;
+}
+
+h2 {
+  margin: auto;
+  padding: 50px;
+  color: #f3ab42;
+  font-size: 2em;
+  text-align: center;
+}
+
+h3 {
+  margin: auto;
+  padding-bottom: 10px;
+  color: #d8d8d8;
+  font-family: 'Tron2';
+  font-size: 2.5em;
+}
+
 .overlay {
   background-color: rgba(0, 0, 0, 0.3);
   height: 100vh;
@@ -94,27 +117,34 @@ main {
   margin: 0 10px;
 }
 
-h1 {
-  background-color: #040f10;
-  color: #94fcf1;
-  font-size: 3em;
-  text-align: center;
+.player-keys {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
 }
 
-h2 {
-  margin: auto;
-  padding: 50px;
-  color: #f3ab42;
-  font-size: 2em;
-  text-align: center;
+.key-row {
+  display: flex;
+  justify-content: space-around;
 }
 
-h3 {
-  margin: auto;
-  padding-bottom: 10px;
-  color: #d8d8d8;
-  font-family: 'Tron2';
-  font-size: 2.5em;
+.key-row2 {
+  margin-top: 1rem;
+}
+
+.key {
+  padding: 1rem;
+  border: 2px solid #f3ab42;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1.8rem;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.key-hover {
+  border: 3px solid #affff7;
+  transform: scale(1.1);
+  transition: ease-in 0.1s;
 }
 
 .winner-block {
